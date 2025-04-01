@@ -52,3 +52,17 @@ function fizzBuzz(n) {
 //fizzBuzz(15); 
 
 //write a function that finds the longest word in a sentence.
+
+const longestWord = (str) => {
+    const arr = str.split(" ")
+    let long = arr[0]
+
+    for (let i = 0; i < arr.length; i++) {
+        if (long.length < arr[i].length) {
+            long = arr[i]
+        }
+    }
+    return long
+}
+
+console.log(longestWord("Hello world from the offices of La fosse Academy victoria"))
